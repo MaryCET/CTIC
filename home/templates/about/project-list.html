@@ -1,0 +1,120 @@
+{% load tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Celcotec Project List{% endblock %}</title>
+
+    {% tailwind_css %}
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {% include 'includes/navbar.html' %}
+
+    <header class="py-8 px-8 max-w-5xl mx-auto">
+        <h1 class="text-3xl md:text-4xl font-bold text-[#1e3a5f] font-serif uppercase tracking-tight inline-block pb-1">
+            Project List
+        </h1>
+        <div class="border-b border-slate-100 w-full my-4"></div>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-6 md:px-12 mb-4 py-0">
+        <div class="flex flex-row items-center justify-start gap-2">
+            
+            <span class="text-slate-700 font-medium text-sm uppercase tracking-wider">Filter by Year:</span>
+    
+            <div class="dropdown dropdown-bottom">
+                <div tabindex="0" role="button" class="btn btn-sm md:btn-md bg-white border border-slate-300 text-[#1e3a5f] hover:bg-slate-50 min-w-[180px] justify-between font-bold shadow-sm">
+                    <span>
+                        {% if request.resolver_match.url_name == 'unlisted_list' %}
+                            Unlisted Projects
+                        {% elif not selected_year %}
+                            All Years
+                        {% else %}
+                            Year: {{ selected_year }}
+                        {% endif %}
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </div>
+    
+                <ul tabindex="0" class="dropdown-content z-[20] menu p-2 shadow-xl bg-white rounded-lg w-56 border border-slate-200 mt-2 max-h-80 overflow-y-auto">
+                    <li class="menu-title text-slate-400 text-xs">Select Year</li>
+                    
+                    <li><a href="{% url 'project_list' %}" class="{% if not selected_year and request.resolver_match.url_name != 'unlisted_list' %}bg-[#1e3a5f] text-white{% else %}text-slate-600 hover:bg-slate-100{% endif %}">All Years</a></li>
+                    
+                    <div class="divider my-1"></div>
+
+                    <li><a href="{% url 'project_list_by_year' year=2026 %}" class="{% if selected_year == 2026 %}bg-[#1e3a5f] text-white{% else %}text-slate-600 hover:bg-slate-100{% endif %}">2026</a></li>
+                    <li><a href="{% url 'project_list_by_year' year=2025 %}" class="{% if selected_year == 2025 %}bg-[#1e3a5f] text-white{% else %}text-slate-600 hover:bg-slate-100{% endif %}">2025</a></li>
+                    <li><a href="{% url 'project_list_by_year' year=2024 %}" class="{% if selected_year == 2024 %}bg-[#1e3a5f] text-white{% else %}text-slate-600 hover:bg-slate-100{% endif %}">2024</a></li>
+                    <li><a href="{% url 'project_list_by_year' year=2023 %}" class="{% if selected_year == 2023 %}bg-[#1e3a5f] text-white{% else %}text-slate-600 hover:bg-slate-100{% endif %}">2023</a></li>
+                    <li><a href="{% url 'project_list_by_year' year=2022 %}" class="{% if selected_year == 2022 %}bg-[#1e3a5f] text-white{% else %}text-slate-600 hover:bg-slate-100{% endif %}">2022</a></li>
+                    <li><a href="{% url 'project_list_by_year' year=2021 %}" class="{% if selected_year == 2021 %}bg-[#1e3a5f] text-white{% else %}text-slate-600 hover:bg-slate-100{% endif %}">2021</a></li>
+                    <li><a href="{% url 'project_list_by_year' year=2020 %}" class="{% if selected_year == 2020 %}bg-[#1e3a5f] text-white{% else %}text-slate-600 hover:bg-slate-100{% endif %}">2020</a></li>
+                    <li><a href="{% url 'project_list_by_year' year=2019 %}" class="{% if selected_year == 2019 %}bg-[#1e3a5f] text-white{% else %}text-slate-600 hover:bg-slate-100{% endif %}">2019</a></li>
+                    <li><a href="{% url 'project_list_by_year' year=2018 %}" class="{% if selected_year == 2018 %}bg-[#1e3a5f] text-white{% else %}text-slate-600 hover:bg-slate-100{% endif %}">2018</a></li>
+                    <li><a href="{% url 'project_list_by_year' year=2017 %}" class="{% if selected_year == 2017 %}bg-[#1e3a5f] text-white{% else %}text-slate-600 hover:bg-slate-100{% endif %}">2017</a></li>
+                    <li><a href="{% url 'project_list_by_year' year=2016 %}" class="{% if selected_year == 2016 %}bg-[#1e3a5f] text-white{% else %}text-slate-600 hover:bg-slate-100{% endif %}">2016</a></li>
+                    
+                    <div class="divider my-1"></div>
+                    <li><a href="{% url 'unlisted_list' %}" class="{% if request.resolver_match.url_name == 'unlisted_list' %}bg-[#1e3a5f] text-white{% else %}text-slate-600 hover:bg-slate-100{% endif %}">Unlisted</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main class="max-w-5xl mx-auto px-6 pb-12">
+        <div class="space-y-12">
+            
+        {% if selected_year == 2026 %}
+            {% include 'about/proj_years/2026_list.html' %}
+        {% elif selected_year == 2025 %}
+            {% include 'about/proj_years/2025_list.html' %}
+        {% elif selected_year == 2024 %}
+            {% include 'about/proj_years/2024_list.html' %}
+        {% elif selected_year == 2023 %}
+            {% include 'about/proj_years/2023_list.html' %}
+        {% elif selected_year == 2022 %}
+            {% include 'about/proj_years/2022_list.html' %}
+        {% elif selected_year == 2021 %}
+            {% include 'about/proj_years/2021_list.html' %}
+        {% elif selected_year == 2020 %}
+            {% include 'about/proj_years/2020_list.html' %}
+        {% elif selected_year == 2019 %}
+            {% include 'about/proj_years/2019_list.html' %}
+        {% elif selected_year == 2018 %}
+            {% include 'about/proj_years/2018_list.html' %}
+        {% elif selected_year == 2017 %}
+            {% include 'about/proj_years/2017_list.html' %}
+        {% elif selected_year == 2016 %}
+            {% include 'about/proj_years/2016_list.html' %}
+        {% elif request.resolver_match.url_name == 'unlisted_list' %}
+            {% include 'about/proj_years/unlisted_list.html' %}
+        {% else %}
+            {# This section shows when "All Years" is active #}
+            <section class="m-0"> {% include 'about/proj_years/2026_list.html' %} </section>
+            <section class="m-0">   {% include 'about/proj_years/2025_list.html' %} </section>
+            <section class="m-0">  {% include 'about/proj_years/2024_list.html' %}</section>
+            <section class="m-0"> {% include 'about/proj_years/2023_list.html' %}</section>
+            <section class="m-0">  {% include 'about/proj_years/2022_list.html' %}</section>
+            <section class="m-0">  {% include 'about/proj_years/2021_list.html' %}</section>
+            <section class="m-0"> {% include 'about/proj_years/2020_list.html' %}</section>
+            <section class="m-0">  {% include 'about/proj_years/2019_list.html' %}</section>
+            <section class="m-0"> {% include 'about/proj_years/2018_list.html' %} </section>
+            <section class="m-0"> {% include 'about/proj_years/2017_list.html' %}</section>
+            <section class="m-0"> {% include 'about/proj_years/2016_list.html' %}</section>
+           
+            
+        {% endif %}
+        
+        </div>
+    </main>
+
+    {% include 'includes/footer.html' %}
+</body>
+</html>

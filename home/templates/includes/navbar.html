@@ -1,0 +1,310 @@
+   <!-- Navigation Bar -->
+   <div class="navbar sticky top-0 z-50 px-4 lg:px-8 bg-gradient-to-r from-[#1a2e54] via-[#203864] to-[#3b5998] shadow-lg">
+    <div class="flex-1">
+        <a class="font-bold tracking-tight text-black hover:bg-white/10">
+            {% load static %}
+            <img src="{% static 'home/images/CTIC_LOGO_1.png' %}" class="w-24 h-auto p-1" alt="CITC Logo">
+        </a>
+    </div>
+    <div class="flex-none hidden lg:block">
+        <ul class="menu menu-horizontal px-1 py-2">
+          <li class="p-2">
+            <a href="{% url 'index' %}" 
+               class="text-white font-medium hover:text-[#FFD700] transition-colors duration-200">
+               HOME
+            </a>
+        </li>
+            <li>
+             <!-- ABOUT -->
+             <div class="group relative inline-block">
+              <div class="flex items-center cursor-pointer text-white font-medium p-2">
+                ABOUT
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  class="ml-2 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" 
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            
+              <ul class="absolute left-0 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 bg-[#F1F5F9] text-black p-2 rounded-box shadow-xl w-40 z-[1]">
+                <li class="hover:bg-gray-200 rounded-lg"><a  href="{% url 'president' %}" class="block p-2">President</a></li>
+                <li class="hover:bg-gray-200 rounded-lg">
+                  <a class="block p-2 hover:text-[#203864] transition-colors" 
+                     href="{% url 'project_list' %}">
+                     Project List
+                  </a>
+              </li>
+                <li class="hover:bg-gray-200 rounded-lg"><a  href="{% url 'clientlist' %}" class="block p-2">Client List</a></li>
+                <li class="hover:bg-gray-200 rounded-lg"><a  href="{% url 'services' %}" class="block p-2">Specializations</a></li>
+              </ul>
+            </div>
+            </li>
+            <li>
+              <div class="group relative inline-block">
+                <div class="flex items-center cursor-pointer text-white font-medium p-2">
+                  FIT-OUT CONSTRUCTION
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+
+             
+              
+                <ul class="absolute left-0 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 bg-[#F1F5F9] text-black p-2  shadow-xl w-45 z-[50]">
+                  <li class="hover:bg-gray-200 rounded-lg"><a href="{% url 'aboutfitout' %}">About Fit Out</a></li>
+                  <li class="hover:bg-gray-200 rounded-lg"><a href="{% url 'fitoutphotos' %}">Fit Out Photos</a></li>
+                  <li class="hover:bg-gray-200 rounded-lg"><a href="{% url 'fitout_misc' %}">Miscellaneous</a></li>
+                 
+                </ul>
+              </div>
+            </li>
+            <li>
+              <li class="list-none">
+                <div class="group relative inline-block">
+                  <div class="flex items-center cursor-pointer text-white font-medium p-2 hover:text-gray-300">
+                    PROJECT PHOTOS
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+              
+                  <ul class="absolute left-0 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 bg-[#F1F5F9] text-black p-2 rounded-box shadow-xl w-56 z-[50]">
+                  
+                    
+                    <li class="relative">
+                      <a href="{% url 'projects_by_year' year=2026 %}" 
+                         class="flex items-center justify-between p-2 hover:bg-gray-200 rounded-lg transition-colors">
+                        <span>Featured Projects</span>
+                      
+                      </a>
+                    </li>
+                    <li class="group/sub relative">
+                      <div class="flex items-center justify-between p-2 cursor-pointer hover:bg-gray-200 rounded-lg">
+                        Electrical Works
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover/sub:-rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                      <ul class="absolute left-full top-0 ml-1 invisible opacity-0 group-hover/sub:visible group-hover/sub:opacity-100 transition-all duration-300 bg-[#F1F5F9] text-black p-2 rounded-box shadow-xl w-56 z-[100]">
+                        <li class="hover:bg-gray-200 rounded-lg"><a href="{% url 'electrical_design' %}">Electrical Design</a></li>
+                        <li class="hover:bg-gray-200 rounded-lg"><a href="{% url 'electrical_dist' %}">Electrical Distribution</a></li>
+                        <li class="hover:bg-gray-200 rounded-lg"><a href="{% url 'preventive_maintenance' %}">Preventive Maintenance</a></li>
+                      
+                      </ul>
+                    </li>
+              
+                    <li class="group/sub relative">
+                      <div class="flex items-center justify-between p-2 cursor-pointer hover:bg-gray-200 rounded-lg">
+                        Civil & General Works
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover/sub:-rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                      <ul class="absolute left-full top-0 ml-1 invisible opacity-0 group-hover/sub:visible group-hover/sub:opacity-100 transition-all duration-300 bg-[#F1F5F9] text-black p-2 rounded-box shadow-xl w-56 z-[100]">
+                        <li class="hover:bg-gray-200 rounded-lg"><a href="{% url 'gen_construction' %}">General Construction</a></li>
+                        <li class="hover:bg-gray-200 rounded-lg"><a href="{% url 'water_refill' %}">Water Refilling Station</a></li>
+                        
+                       
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            <li>
+            <!-- RENEWABLE ENERGY -->
+            <div class="group relative inline-block">
+              <div class="flex items-center cursor-pointer text-white font-medium p-2">
+                RENEWABLE ENERGY
+                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            
+              <ul class="absolute left-0 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 bg-[#F1F5F9] text-black p-2 rounded-box shadow-xl w-54 z-[50]">
+                <li class="hover:bg-gray-200 rounded-lg"><a href="{% url 'renewable_energy' %}">Renewable Energy Solutions</a></li>
+                <li class="hover:bg-gray-200 rounded-lg"><a href="{% url 'solar_energy' %}">Solar Energy</a></li>
+                
+              </ul>
+            </div>
+            </li>
+            <li>
+              <button onclick="openContactModal()" 
+                 class="inline-flex items-center justify-center px-6 py-2.5 bg-[#FFD700] text-black text-sm font-bold uppercase tracking-widest rounded-sm shadow-md transition-all duration-300 hover:bg-white hover:text-black hover:-translate-y-0.5 active:translate-y-0 focus:outline-none">
+                 Contact
+              </button>
+            </li>
+        </ul>
+        
+    </div>
+
+    <div id="contactModal" 
+    class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-[100] transition-opacity duration-300">
+ <div class="bg-[#203864] p-8 rounded-sm shadow-2xl border border-[#FFD700] text-white max-w-sm w-full mx-4 transform transition-all">
+   <h3 class="text-xl font-bold mb-4 uppercase tracking-wider border-b border-[#FFD700]/20 pb-2">Contact Info</h3>
+   
+   <div class="mb-4">
+     <p class="text-[10px] text-gray-400 uppercase tracking-widest mb-1">Email</p>
+     <div class="flex items-center justify-between bg-black/40 p-3 rounded-sm border border-white/5">
+       <span id="emailText" class="text-sm font-medium">mrlim03@gmail.com</span>
+       <button onclick="copyToClipboard('emailText')" 
+               class="text-[#FFD700] hover:text-white text-xs font-black transition-colors tracking-tighter">
+         COPY
+       </button>
+     </div>
+   </div>
+
+   <div class="mb-6">
+     <p class="text-[10px] text-gray-400 uppercase tracking-widest mb-1">Phone</p>
+     <div class="flex items-center justify-between bg-black/40 p-3 rounded-sm border border-white/5">
+       <span id="phoneText" class="text-sm font-medium">(046) 476 5074</span>
+       <button onclick="copyToClipboard('phoneText')" 
+               class="text-[#FFD700] hover:text-white text-xs font-black transition-colors tracking-tighter">
+         COPY
+       </button>
+     </div>
+   </div>
+
+   <button onclick="closeContactModal()" 
+           class="w-full py-3 bg-[#FFD700] text-black font-extrabold uppercase text-xs tracking-widest hover:bg-white hover:scale-[1.02] active:scale-95 transition-all duration-200">
+     Close
+   </button>
+ </div>
+</div>
+
+    <!-- MOBILE SIDEBAR MENU -->
+    <div class="flex-none lg:hidden">
+        <button onclick="openSidebar()" class="btn btn-ghost btn-circle text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+</div>
+</div>
+
+<!-- Sidebar Overlay -->
+<div id="sidebarOverlay" onclick="closeSidebar()" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity duration-300 opacity-0"></div>
+
+<!-- Sidebar Content -->
+<div id="mobileSidebar" class="fixed top-0 right-0 h-full w-80 bg-white z-[70] transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl overflow-y-auto text-black">
+    <div class="p-4 flex justify-between items-center border-b border-gray-200">
+        <span class="font-bold text-lg text-[#203864]">MENU</span>
+        <button onclick="closeSidebar()" class="btn btn-ghost btn-circle btn-sm text-black">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+    <ul class="menu p-4 w-full text-base-content text-black">
+        <li><a href="{% url 'index' %}">HOME</a></li>
+        <li>
+            <details>
+                <summary>ABOUT</summary>
+                <ul>
+                    <li><a href="{% url 'president' %}">President</a></li>
+                    <li><a href="{% url 'project_list' %}">Project List</a></li>
+                    <li><a href="{% url 'clientlist' %}">Client List</a></li>
+                    <li><a href="{% url 'services' %}">Specializations</a></li>
+                </ul>
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>FIT-OUT CONSTRUCTION</summary>
+                <ul>
+                    <li><a href="{% url 'aboutfitout' %}">About Fit Out</a></li>
+                    <li><a href="{% url 'fitoutphotos' %}">Fit Out Photos</a></li>
+                    <li><a href="{% url 'fitout_misc' %}">Miscellaneous</a></li>
+                </ul>
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>PROJECT PHOTOS</summary>
+                <ul>
+                    <li><a href="{% url 'projects_by_year' year=2026 %}">Featured Projects</a></li>
+                    <li>
+                        <details>
+                            <summary>Electrical Works</summary>
+                            <ul>
+                                <li><a href="{% url 'electrical_design' %}">Electrical Design</a></li>
+                                <li><a href="{% url 'electrical_dist' %}">Electrical Distribution</a></li>
+                                <li><a href="{% url 'preventive_maintenance' %}">Preventive Maintenance</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Civil & General Works</summary>
+                            <ul>
+                                <li><a href="{% url 'gen_construction' %}">General Construction</a></li>
+                                <li><a href="{% url 'water_refill' %}">Water Refilling Station</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>RENEWABLE ENERGY</summary>
+                <ul>
+                    <li><a href="{% url 'renewable_energy' %}">Renewable Energy Solutions</a></li>
+                    <li><a href="{% url 'solar_energy' %}">Solar Energy</a></li>
+                </ul>
+            </details>
+        </li>
+        <li><button onclick="openContactModal(); closeSidebar();" class="font-bold text-[#203864]">CONTACT</button></li>
+    </ul>
+</div>
+
+<script>
+  function openContactModal() {
+    document.getElementById('contactModal').style.display = 'flex';
+}
+
+function closeContactModal() {
+    document.getElementById('contactModal').style.display = 'none';
+}
+
+function copyToClipboard(elementId) {
+    const text = document.getElementById(elementId).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Copied to clipboard: " + text);
+    });
+}
+
+// Close modal if user clicks outside of the box
+window.onclick = function(event) {
+    let modal = document.getElementById('contactModal');
+    if (event.target == modal) {
+        closeContactModal();
+    }
+    // Also close sidebar if clicking outside (handled by overlay click, but just in case)
+    let sidebarOverlay = document.getElementById('sidebarOverlay');
+    if (event.target == sidebarOverlay) {
+        closeSidebar();
+    }
+}
+
+function openSidebar() {
+    const sidebar = document.getElementById('mobileSidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    overlay.classList.remove('hidden');
+    setTimeout(() => {
+        overlay.classList.remove('opacity-0');
+        sidebar.classList.remove('translate-x-full');
+    }, 10);
+}
+
+function closeSidebar() {
+    const sidebar = document.getElementById('mobileSidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    sidebar.classList.add('translate-x-full');
+    overlay.classList.add('opacity-0');
+    setTimeout(() => {
+        overlay.classList.add('hidden');
+    }, 300);
+}
+</script>

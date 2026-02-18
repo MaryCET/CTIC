@@ -1,0 +1,167 @@
+{% load tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celcotec Services & Specializations</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  {% tailwind_css %}
+    
+  <style>
+   
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .reveal { opacity: 0; }
+    .reveal.active { animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+  </style>
+</head>
+<body class="bg-white antialiased font-sans">
+
+ {% include 'includes/navbar.html' %}
+
+ <header class="py-12 px-8 max-w-5xl mx-auto reveal">
+    <h1 class="text-3xl md:text-4xl font-serif font-bold text-[#002147] tracking-tight uppercase text-start">
+        Services & Specializations
+    </h1>
+    <div class="border-b-2 border-[#D4AF37] w-24 mt-4"></div>
+ </header>
+
+  <section class="px-8 py-8 bg-base-100 reveal">
+    <div class="max-w-5xl mx-auto">
+      <div class="overflow-hidden rounded-lg shadow-xl border border-slate-200">
+        <div class="bg-slate-700 text-white border-b-4 border-[#D4AF37] py-6 px-8">
+          <h2 class="text-xl md:text-2xl font-serif font-bold uppercase tracking-tight">
+            General Building & Construction
+          </h2>
+        </div>
+  
+        <div class="flex flex-col md:flex-row bg-white">
+          <div class="w-full md:w-2/5 h-72 md:h-auto overflow-hidden">
+            <img src="{% static 'home/images/foc-pgal-d-link.jpg' %}" 
+                 alt="General Construction" 
+                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+          </div>
+  
+          <div class="w-full md:w-3/5 py-10 px-8 flex items-center">
+            <ul class="space-y-4 list-disc list-outside ml-6 marker:text-[#D4AF37]">
+              <li><span class="text-slate-700 font-serif text-lg leading-relaxed">Architectural works for office/residential occupancies</span></li>
+              <li><span class="text-slate-700 font-serif text-lg leading-relaxed">General painting and specialty painting</span></li>
+              <li><span class="text-slate-700 font-serif text-lg leading-relaxed">Specialty masonry and tile works</span></li>
+              <li><span class="text-slate-700 font-serif text-lg leading-relaxed">Fitting-out works for electrical/mechanical systems</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-8 py-8 bg-base-100 reveal">
+    <div class="max-w-5xl mx-auto">
+      <div class="overflow-hidden rounded-lg shadow-xl border border-slate-200">
+        <div class="bg-[#002147] text-white border-b-4 border-[#D4AF37] py-6 px-8">
+          <h2 class="text-xl md:text-2xl font-serif font-bold uppercase tracking-tight">
+            Electrical Supply & Installation
+          </h2>
+        </div>
+  
+        <div class="flex flex-col md:flex-row-reverse bg-white">
+          <div class="w-full md:w-2/5 h-72 md:h-auto overflow-hidden">
+            <img src="{% static 'home/images/CTIC_ElectricalWorks.png' %}" 
+                 alt="Electrical Installation" 
+                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+          </div>
+  
+          <div class="w-full md:w-3/5 py-10 px-8">
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 list-disc list-outside ml-6 marker:text-[#D4AF37]">
+              <li><span class="text-slate-700 font-serif text-lg">Unit Substation</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">Power Transformer</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">Overhead Transmission Lines</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">Power Center</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">Switched & Auto Capacitor Banks</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">Distribution System</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">Panelboards</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">AVR & UPS Systems</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">Electrical Motors & Controllers</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">HV & LV Switch Gears</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">GenSet & Transfer Switch</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">Motor Control Center (MCC)</span></li>
+              
+              <li class="col-span-full list-none border-t border-slate-100 mt-4 pt-4">
+                 <span class="font-bold text-[#002147] uppercase tracking-wider text-xs">Consultancy & Professional Services</span>
+              </li>
+              <li><span class="text-slate-700 font-serif text-lg">Design and Maintenance</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">Project Management</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">Technical Support</span></li>
+              <li><span class="text-slate-700 font-serif text-lg">Preventive Maintenance</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="px-8 py-8 bg-base-100 reveal">
+    <div class="max-w-5xl mx-auto">
+      <div class="overflow-hidden rounded-lg shadow-xl border border-slate-200">
+        
+        <div class="bg-teal-900 text-white border-b-4 border-[#D4AF37] py-6 px-8">
+          <h2 class="text-xl md:text-2xl font-serif font-bold uppercase tracking-tight">
+            Telecom & Data Security
+          </h2>
+        </div>
+
+        <div class="flex flex-col md:flex-row bg-white">
+          <div class="w-full md:w-2/5 h-72 md:h-auto overflow-hidden">
+            <img src="{% static 'home/images/CTIC_cctv.png' %}" 
+                 alt="Telecom and Data Security Systems" 
+                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+          </div>
+
+          <div class="w-full md:w-3/5 py-10 px-8">
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 list-disc list-outside ml-6 marker:text-[#D4AF37]">
+              <li><span class="text-slate-700 font-serif text-lg leading-snug">CCTV Systems</span></li>
+              <li><span class="text-slate-700 font-serif text-lg leading-snug">Voice and Data System</span></li>
+              <li><span class="text-slate-700 font-serif text-lg leading-snug">Outside Plant System</span></li>
+              <li><span class="text-slate-700 font-serif text-lg leading-snug">Inside Plant System</span></li>
+              <li><span class="text-slate-700 font-serif text-lg leading-snug">PABX & KTS Switchboards</span></li>
+              <li><span class="text-slate-700 font-serif text-lg leading-snug">Intercom System</span></li>
+              <li><span class="text-slate-700 font-serif text-lg leading-snug">MDF, MMTC and TTC</span></li>
+              <li><span class="text-slate-700 font-serif text-lg leading-snug"> 	Local area network cabling and distribution system</span></li>
+              
+              <li class="col-span-full list-none border-t border-slate-100 mt-4 pt-4">
+                 <span class="font-bold text-teal-900 uppercase tracking-wider text-xs">Engineering & Technical Support</span>
+              </li>
+              <li><span class="text-slate-700 font-serif text-lg leading-snug">Design and Engineering</span></li>
+              <li><span class="text-slate-700 font-serif text-lg leading-snug">Project Construction</span></li>
+              <li><span class="text-slate-700 font-serif text-lg leading-snug">Technical Services</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('active');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+{% include 'includes/footer.html' %}
+</body>
+</html>

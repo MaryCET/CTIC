@@ -1,0 +1,359 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcotec | Renewable Energy</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .text-gold { color: #D4AF37; }
+        .bg-gold { background-color: #D4AF37; }
+        .border-gold { border-color: #D4AF37; }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        /* The base animation class for items already in view (Hero) */
+        .hero-reveal {
+          opacity: 0;
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Scroll-triggered reveal class */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Staggered delays */
+        .delay-1 { animation-delay: 0.2s; transition-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; transition-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; transition-delay: 0.6s; }
+        .delay-4 { transition-delay: 0.8s; }
+
+    </style>
+</head>
+<body class="bg-base-100">
+    {% include 'includes/navbar.html' %}
+
+    <div class="hero min-h-72 bg-green-950 text-white relative overflow-hidden" style=" background-image: url('https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-blend-mode: overlay; background-size: cover;">
+        <div class="hero-overlay bg-opacity-50"></div>
+        <div class="hero-content flex-col lg:flex-row-reverse max-w-7xl w-full px-10 gap-8">
+            
+            <div class="flex-1 text-left p-10">
+                <p class="hero-reveal delay-1 text-gold font-bold tracking-widest uppercase mb-2 text-lg">RENEWABLE ENERGY</p>
+                <h1 class="hero-reveal delay-2 mb-4 text-4xl lg:text-6xl font-serif leading-tight">
+                      
+                    Precision <span class="text-gold">Power Solutions</span> for a Sustainable Future.
+                </h1>
+               
+            </div>
+        </div>
+    </div>
+<!-- Renewable Energy Section -->
+    <div class="bg-gray-50 p-4 lg:p-12 font-sans text-gray-800">
+        <div class="max-w-7xl mx-auto">
+          <div class="bg-white overflow-hidden shadow-2xl shadow-gray-200/50 border border-gray-100">
+            <div class="flex flex-col lg:flex-row items-stretch">
+              
+              <div class="lg:w-3/5 p-8 lg:p-16">
+                <div class="max-w-3xl">
+                  <h1 class="text-4xl lg:text-6xl font-bold uppercase mb-6 tracking-tight text-gray-900 leading-[1.1]">
+                    Renewable Energy <span class="text-emerald-600">Solutions</span>
+                  </h1>
+                  <p class="text-xl text-black leading-relaxed mb-12 font-serif">
+                    Providing a comprehensive new power generation platform, Celcotec delivers individualized energy solutions for <span class="font-bold">
+                        homes, communities, buildings, and factories
+                    </span>  by covering every stage from initial design to final installation. 
+                   <br> Our approach seamlessly integrates solar and wind power with reliable off-grid supply to significantly reduce dependence on fossil fuels, ensuring a sustainable and independent energy future tailored to your specific needs.
+                  </p>
+      
+                  <div class="space-y-8">
+                    <h3 class="text-xl font-bold uppercase text-gray-900 flex items-center gap-2">
+                      <span class="w-8 h-[2px] bg-emerald-500"></span>
+                      Our Process
+                    </h3>
+                    
+                    <ul class="grid gap-6">
+                      <li class="group flex items-start gap-4">
+                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-500 transition-colors duration-300">
+                          <svg class="w-3.5 h-3.5 text-emerald-600 group-hover:text-white" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                          </svg>
+                        </div>
+                        <div>
+                          <p class="text-black font-semibold uppercase">Meticulous Site Analysis</p>
+                          <p class="font-serif text-lg text-black">Detailed evaluation of customer requirements and environmental conditions.</p>
+                        </div>
+                      </li>
+      
+                      <li class="group flex items-start gap-4">
+                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-500 transition-colors duration-300">
+                          <svg class="w-3.5 h-3.5 text-emerald-600 group-hover:text-white" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                          </svg>
+                        </div>
+                        <div>
+                          <p class="text-black font-semibold uppercase">Custom Engineering</p>
+                          <p class="text-lg font-serif text-black">We design a power solution specific to the customer and conditions. <br> Custom-tailored solution eliminates extraneous expenses in installation and power generation.</p>
+                        </div>
+                      </li>
+      
+                      <li class="group flex items-start gap-4">
+                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-500 transition-colors duration-300">
+                          <svg class="w-3.5 h-3.5 text-emerald-600 group-hover:text-white" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                          </svg>
+                        </div>
+                        <div>
+                          <p class="text-black font-semibold uppercase">Flexible Delivery</p>
+                          <p class="text-lg text-black font-serif">Full turn-key setups or professional on-site supervision for all projects.</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="lg:w-2/5 relative min-h-[400px]">
+                <img 
+                  src="{% static '2026-projects/images/CTIC-JESTRE-SOLAR-INSTALLATION-4.jpeg' %}" 
+                  alt="Renewable Energy Farm" 
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-emerald-900/10 mix-blend-multiply"></div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Solar Energy Section -->
+      <div class="bg-gray-50 p-4 lg:p-12 font-sans text-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white overflow-hidden shadow-2xl shadow-gray-200/50 border border-gray-100">
+    
+                <div class="flex flex-col-reverse lg:flex-row items-stretch">
+    
+                    <div class="lg:w-2/5 relative min-h-[400px] lg:min-h-full">
+                        <img src="{% static '2026-projects/images/CTIC-JESTRE-SOLAR-INSTALLATION-4.jpeg' %}"
+                            alt="Renewable Energy Farm" class="absolute inset-0 w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-emerald-900/10 mix-blend-multiply"></div>
+                    </div>
+    
+                    <div class="lg:w-3/5 p-8 lg:p-16">
+                        <div class="max-w-3xl">
+                            <h1 class="text-4xl lg:text-6xl font-bold uppercase mb-3 tracking-tight text-gray-900 leading-[1.1]">
+                                <span class="text-blue-900"> Photo-Voltaic</span> Modules
+                            </h1>
+                            <p class="text-xl text-black leading-relaxed mb-6 font-serif">
+                                The Photovoltaic (PV) module serves as the foundational component for all solar energy applications. 
+                                Our 280W standard PV modules are specifically engineered for the construction of large-scale solar power stations.
+                            </p>
+    
+                            <h3 class="text-xl font-bold uppercase text-gray-900 flex items-center gap-2 mb-3">
+                                <span class="w-8 h-[2px] bg-emerald-500"></span>
+                                WHAT WE OFFER
+                            </h3>
+    
+                            <div class="space-y-8">
+                                <ul class="grid gap-6">
+                                    <li class="group flex items-start gap-4">
+                                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-500 transition-colors duration-300">
+                                            <svg class="w-3.5 h-3.5 text-emerald-600 group-hover:text-white" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-lg text-black font-bold uppercase">Mono-crystalline PV Module</p>
+                                            <p class="font-serif text-black mt-1">Best For: Residential rooftops, small spaces, and high-heat environments.</p>
+                                        </div>
+                                    </li>
+    
+                                    <li class="group flex items-start gap-4">
+                                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-500 transition-colors duration-300">
+                                            <svg class="w-3.5 h-3.5 text-emerald-600 group-hover:text-white" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-lg text-black font-bold uppercase">Poly-crystalline PV Module</p>
+                                            <p class="font-serif text-black mt-1">Best For: Large ground-mounted arrays, solar farms, or projects with massive roof space and tight budgets.</p>
+                                        </div>
+                                    </li>
+    
+                                    <li class="group flex items-start gap-4">
+                                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-500 transition-colors duration-300">
+                                            <svg class="w-3.5 h-3.5 text-emerald-600 group-hover:text-white" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-lg text-black font-bold uppercase">Custom Solutions & Specs</p>
+                                            <p class="font-serif text-black mt-1">
+                                                Available in 165W, 170W, 175W, and 280W specifications. We can tailor modules to special requirements, with a versatile power range spanning from 5W to 280W.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="mt-12 flex flex-col sm:flex-row gap-4">
+                                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold uppercase tracking-widest transition-all duration-300 shadow-lg shadow-emerald-200">
+                                    Portable Solar Power
+                                      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                      </svg>
+                                    </a>
+                                    
+                                    <a href="#projects" class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-900 text-gray-900 font-bold uppercase tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-300">
+                                      Outdoor Kit
+                                    </a>
+                                  </div>
+                                <div class="mt-10 p-6 bg-gray-100 rounded-lg border-l-4 border-blue-900">
+                                    <h4 class="text-sm font-bold uppercase text-blue-900 mb-2">Technical Standards & Performance</h4>
+                                    <p class="text-sm font-serif text-gray-700 leading-relaxed">
+                                        Our PV modules are produced strictly according to the <strong>IEC61215 international standard</strong> (including IEC61215;1993) and quality controlled according to <strong>ISO 9001:2000</strong>. All modules have successfully passed <strong>CE and TUV</strong> certification processes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- End of Solar Energy Section -->
+
+<div class="bg-gray-50 p-4 lg:p-12 font-sans text-gray-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="bg-white overflow-hidden shadow-2xl shadow-gray-200/50 border border-gray-100">
+        <div class="flex flex-col lg:flex-row items-stretch">
+          
+          <div class="lg:w-3/5 p-8 lg:p-16">
+            <div class="max-w-3xl">
+              <h1 class="text-4xl lg:text-6xl font-bold uppercase mb-6 tracking-tight text-gray-900 leading-[1.1]">
+                High Efficiency <span class="text-red-900">Micro Wind Generator</span>
+              </h1>
+              
+              <p class="text-xl text-black leading-relaxed mb-8 font-serif">
+                Celcotec delivers a non-traditional power generation platform. Unlike traditional turbines, our systems are engineered to thrive in normal wind conditions, ensuring a sustainable and independent energy future.
+              </p>
+  
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 border-y border-gray-100 py-8">
+                <div class="flex items-center gap-3">
+                  <span class="text-emerald-600 font-bold text-2xl">45%</span>
+                  <span class="text-sm uppercase font-semibold tracking-wide">Power Conversion Efficiency</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-emerald-600 font-bold text-2xl">2m/s</span>
+                  <span class="text-sm uppercase font-semibold tracking-wide">Start Wind Speed</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-emerald-600 font-bold text-2xl">360°</span>
+                  <span class="text-sm uppercase font-semibold tracking-wide">Self-Correcting Direction</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-emerald-600 font-bold text-2xl">15y+</span>
+                  <span class="text-sm uppercase font-semibold tracking-wide">Expected Service Life</span>
+                </div>
+              </div>
+  
+              <div class="space-y-8">
+                <h3 class="text-xl font-bold uppercase text-gray-900 flex items-center gap-2">
+                  <span class="w-8 h-[2px] bg-emerald-500"></span>
+                  Key Advantages
+                </h3>
+                
+                <ul class="grid gap-6">
+                  <li class="group flex items-start gap-4">
+                    <div class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-500 transition-colors duration-300">
+                      <svg class="w-3.5 h-3.5 text-emerald-600 group-hover:text-white" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="text-black font-semibold uppercase">High Profit & Performance</p>
+                      <p class="font-serif text-lg text-black">Generates significantly more power for a higher ROI. Features automatic electromagnetic braking for safety in high-speed winds.</p>
+                    </div>
+                  </li>
+  
+                  <li class="group flex items-start gap-4">
+                    <div class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-500 transition-colors duration-300">
+                      <svg class="w-3.5 h-3.5 text-emerald-600 group-hover:text-white" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="text-black font-semibold uppercase">Silent & Scalable</p>
+                      <p class="text-lg font-serif text-black">Quiet operation with no vibration. Easy to install and expand into stacked groups or large-scale arrays.</p>
+                    </div>
+                  </li>
+  
+                  <li class="group flex items-start gap-4">
+                    <div class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-500 transition-colors duration-300">
+                      <svg class="w-3.5 h-3.5 text-emerald-600 group-hover:text-white" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="text-black font-semibold uppercase">Versatile Applications</p>
+                      <p class="text-lg text-black font-serif">Tailored for homes, buildings, sea floats, and industrial factories with full turn-key setup or professional supervision.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="lg:w-2/5 relative min-h-[400px]">
+            <img 
+              src="{% static '2026-projects/images/CTIC-JESTRE-SOLAR-INSTALLATION-4.jpeg' %}" 
+              alt="Renewable Energy Farm" 
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-emerald-900/10 mix-blend-multiply"></div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+    {% include 'includes/footer.html' %}
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

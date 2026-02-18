@@ -1,26 +1,61 @@
-{% load static tailwind_tags %}
+{% load tailwind_tags %}
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
 <head>
-    <title>Django Tailwind</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Celcotec Industrial Corp.{% endblock %}</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+    
     {% tailwind_css %}
+
+    <style>
+        /* All your global CSS (Brand colors, Loader, Animations) stays here */
+        :root { --ctic-navy: #002147; --ctic-yellow: #FFD700; }
+        #loader-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #ffffff; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.4s ease-out; }
+        .spinner { width: 60px; height: 60px; border: 6px solid var(--ctic-navy); border-top: 6px solid var(--ctic-yellow); border-radius: 50%; animation: spin 1s linear infinite; }
+        .loader-text { margin-top: 20px; font-family: 'Arial Black', sans-serif; font-size: 24px; letter-spacing: 4px; color: var(--ctic-navy); text-transform: uppercase; }
+        .loader-text span { color: var(--ctic-yellow); }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        body { margin: 0; overflow: hidden; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .hero-reveal { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-1 { animation-delay: 0.2s; } .delay-2 { animation-delay: 0.4s; } .delay-3 { animation-delay: 0.6s; }
+        @keyframes slowZoom { 0% { transform: scale(1); } 100% { transform: scale(1.1); } }
+        .animate-slow-zoom { animation: slowZoom 20s ease-in-out infinite alternate; }
+    </style>
+    {% block extra_css %}{% endblock %}
 </head>
+<body class="bg-base-200 min-h-screen overflow-x-hidden">
+    {% include 'includes/navbar.html' %}
 
-<body class="bg-gray-50 text-black font-serif leading-normal tracking-normal">
-
-    <div class="toast toast-top toast-end">
-        <div class="alert alert-info">
-            <span>Hello from daisyUi 👋</span>
-        </div>
+    <div id="loader-overlay">
+        <div class="spinner"></div>
+        <div class="loader-text">C<span>T</span>IC</div>
     </div>
 
-<div class="container mx-auto">
-    <section class="flex items-center justify-center h-screen">
-        <h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-    </section>
-</div>
+    <div id="page-content" style="opacity: 0; transition: opacity 0.5s ease-in;">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    {% include 'includes/footer.html' %}
+
+    <script>
+        // Loader Logic
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader-overlay');
+            const content = document.getElementById('page-content');
+            loader.style.opacity = '0';
+            content.style.opacity = '1';
+            document.body.style.overflow = 'auto';
+            setTimeout(() => { loader.style.display = 'none'; }, 400);
+        });
+    </script>
+    {% block extra_js %}{% endblock %}
 </body>
 </html>

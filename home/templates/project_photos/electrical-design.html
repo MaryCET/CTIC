@@ -1,0 +1,283 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celcotec | Electrical Design</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom smooth transition for masonry items */
+        .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans">
+  {% include 'includes/navbar.html' %}
+
+  <header class="py-8 max-w-7xl mx-auto">
+    <h1 class="text-3xl md:text-4xl px-4 font-bold text-[#1e3a5f] font-serif uppercase tracking-tight inline-block pb-1">
+        Electrical Design
+    </h1>
+    <h3 class="text-xl md:text-1xl px-4 font-bold font-medium">List of past projects</h3>
+</header>
+    <main class="max-w-7xl mx-auto px-4 space-y-3 pb-20">
+
+         <!-- Offshore BP -->
+      <section class="bg-white rounded-none p-6 shadow-xl shadow-slate-200/50 border border-slate-100">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+        <div>
+            <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-black">For HSG</h2>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-01-01.jpg' %}" alt="Fit-out 1" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Electrical backbone<br>
+                    Banco de Oro Gil Puyat/Paseo, Makati
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-01-02.jpg' %}" alt="Fit-out 2" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Electrical backbone<br>
+                    Banco de Oro South Tower, Makati Avenue, Makati
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-01-03.jpg' %}" alt="Fit-out 3" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Banco de Oro Quintin Paredes, Binondo, Manila
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-01-07.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Banco de Oro Fuente
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--For Mohri-->
+
+<section class="bg-white rounded-none p-6 shadow-xl shadow-slate-200/50 border border-slate-100">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+        <div>
+            <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-black">For Mohri</h2>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-01-04.jpg' %}" alt="Fit-out 1" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Sorsogon City Hall
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-01-05.jpg' %}" alt="Fit-out 2" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Proposed Training Center for the Development Bank of the Philippines
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-01-07.jpg' %}" alt="Fit-out 3" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    DBP cottages in Baguio City
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-01-09.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    DBP Makati
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-01-11.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    DBP Staff House in Baguio City
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!--For UST-->
+
+<section class="bg-white rounded-none p-6 shadow-xl shadow-slate-200/50 border border-slate-100">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+        <div>
+            <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-black">For UST</h2>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-02-01.jpg' %}" alt="Fit-out 1" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    UST High School
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-02-02.jpg' %}" alt="Fit-out 2" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    ACU Feeder line for
+                    UST Commerce Building
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-02-03.jpg' %}" alt="Fit-out 3" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Electrical and civil works on
+UST TINOKO substation, 1 MVA
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-02-04.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    1 MVA transformer
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-02-05.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    ACU feeder line of UST Education Building
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-02-06.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    UST Grandstand
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-02-07.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    UST Tower light
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-electdsgn-01-06.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    ON Semicon in Laguna
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+  </main>
+    
+{% include 'includes/footer.html' %}
+
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <html lang="en" data-theme="cupcake">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>President</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+  
+  {% tailwind_css %}
+
+</head>
+<style>
+    /* Hides scrollbar but keeps functionality */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+<body class="bg-slate-50">
+
+ 
+  <main class="bg-base-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            
+            <div class="lg:col-span-1">
+                <div class="sticky top-24">
+                    <div class="avatar mb-6 flex justify-center lg:justify-start">
+                        <div class="w-64 rounded-xl ring ring-amber-400 ring-offset-base-100 ring-offset-2 shadow-2xl">
+                            <img src="{% static 'home/images/CTIC_President.png' %}" alt="Engr. Lim" />
+                        </div>
+                    </div>
+                    <div class="text-center lg:text-left">
+                        <h1 class="text-2xl font-bold text-black font-serif mb-2">Engr. Menandro "Andy" R. Lim, PEE</h1>
+                        
+                        <p class="text-md ont-medium text-gray-600 font-semibold">
+                            President & Founder <br>
+                            Professional Electrical Engineer President, IIEE Northern Cavite Chapter (IIEE) <br>
+                            2011 Member, IIEE Electrical Safety Enforcement and Awareness (ESEA) <br>
+                            2002 President, Society of Philippine Electrotechnical Contractors and Suppliers, Inc. (SPECS) <br>
+                             Most Outstanding MAPUA Institute of Technology EE Alumnus – Electrical Construction <br>
+                             2026 IIEE MCDC Subcommittee Chairperson for Sports
+                            <br>
+                            2026 IIEE 51st ANC Convention Bureau Deputy Director for Sports
+                            <br>
+                            2026 IIEE TCPDC Adviser
+                            </p>
+                        <div class="divider"></div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 space-y-6 text-gray-700 leading-relaxed">
+                <h2 class="text-3xl font-bold font-serif uppercase mb-4 border-b-2 border-amber-400 w-fit pb-2">
+                    Our President
+                </h2>
+            <div class="font-serif text-lg space-y-4">
+                <p>
+                    <span class="font-bold">ENGR. MENANDRO R. LIM</span>, president and authorized managing officer of Celcotec Industrial Corp., is a professional electrical engineer with over twenty years of experience in the various aspects of electrical engineering, such as design, construction, testing and commissioning, and preventive maintenance of electrical equipment.
+                  <br>  Engr. Lim joined a Saudi Arabian Construction Company in 1987 as Project Engineer and then transferred to Ret-Ser Engineering Agency in 1988. Among the projects he worked on while in Saudi Arabia were SCECO Medical Clinic, Al-Fanateer Industrial Park, Waste Water Treatment Plant, Unayzah Water Treatment Plant and Long-Range Radar Station.
+                    
+                </p>
+
+                <p>He is also an electrical consultant for the Golden ABC, Keppel Batangas Substation, University of Santo Tomas, B&G Department; Department of Environment & Natural Resources (DENR) Region IV Office, Department of Health Dagupan City, Rustan’s Super Center, Inc., various BDO Bank branches, Bayan Trade Office Global City Fort Bonifacio, 5-Storey Residential Building at E. Rodriguez., Q.C.
+                 </p>
+                        
+                        <p>
+                    Engr. Lim is a lifetime member of the Institute of Integrated Electrical Engineers of the Phils., Inc. (IIEE), former president of the Society of Philippine Electrical Contractors and Suppliers (SPECS) and member of Philippine Instrumentation & Controls Society (PICS). He is also the individual founding member of Phil GBC (Philippine Green Building Council).
+                    </p>
+
+    
+
+            </div>
+                
+              
+            </div>
+        </div>
+    </div>
+</main>
+
+    {% include 'includes/footer.html' %}
+    <script>
+      function updateGallery(element, imageSrc, targetId) {
+          const mainDisplay = document.getElementById(targetId);
+          
+          mainDisplay.style.opacity = '0.5';
+          
+          setTimeout(() => {
+              mainDisplay.src = imageSrc;
+              mainDisplay.style.opacity = '1';
+          }, 150);
+    
+          // Only reset borders within the specific gallery section
+          const parentSection = element.closest('.grid'); 
+          parentSection.querySelectorAll('.thumb-container').forEach(thumb => {
+              thumb.classList.remove('border-[#FFD700]');
+              thumb.classList.add('border-transparent');
+          });
+    
+          element.classList.remove('border-transparent');
+          element.classList.add('border-[#FFD700]');
+
+      }
+      
+        // Existing Gallery function
+        function updateGallery(element, imageSrc, targetId) {
+            const mainDisplay = document.getElementById(targetId);
+            mainDisplay.style.opacity = '0.5';
+            setTimeout(() => {
+                mainDisplay.src = imageSrc;
+                mainDisplay.style.opacity = '1';
+            }, 150);
+      
+            const parentSection = element.closest('.grid'); 
+            parentSection.querySelectorAll('.thumb-container').forEach(thumb => {
+                thumb.classList.remove('border-[#FFD700]');
+                thumb.classList.add('border-transparent');
+            });
+      
+            element.classList.remove('border-transparent');
+            element.classList.add('border-[#FFD700]');
+        }
+      
+        // --- NEW MODAL FUNCTIONS ---
+        function openModal(src) {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            
+            modalImg.src = src;
+            modal.classList.remove('hidden');
+            // Prevent scrolling when modal is open
+            document.body.style.overflow = 'hidden';
+            
+            // Animation pop-in
+            setTimeout(() => {
+                modalImg.classList.remove('scale-95');
+                modalImg.classList.add('scale-100');
+            }, 10);
+        }
+      
+        function closeModal() {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            
+            modalImg.classList.add('scale-95');
+            modalImg.classList.remove('scale-100');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 200);
+        }
+        function scrollGallery(btn, direction) {
+            const container = btn.parentElement.querySelector('.thumb-scroll-container');
+            // Scrolls by roughly 2 thumbnail widths
+            const scrollAmount = container.clientWidth / 2; 
+        
+            if (direction === 'left') {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+      
+    </script>
+</body>
+</html>
+{% endblock %}

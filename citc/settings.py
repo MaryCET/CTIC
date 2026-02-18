@@ -131,7 +131,7 @@ STATIC_URL = 'static/'
 
 # Add this to tell Django to look in your root static folder
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "static", 
 ]
 
 # Default primary key field type

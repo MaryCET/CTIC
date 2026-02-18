@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Celcotec | Portable Solar Power Solutions{% endblock %}
+{% block meta_description %}
+Explore our Multi-function Solar Power Outdoor Kits. Featuring 100W foldable panels, 
+LiFePO4 batteries, and 20+ year lifetimes. Perfect for camping, boating, and emergencies.
+{% endblock %}
+{% block content %}
+
+
+
+    <div class="hero min-h-72 bg-green-950 text-white relative overflow-hidden" style=" background-image: url('https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-blend-mode: overlay; background-size: cover;">
+        <div class="hero-overlay bg-opacity-50"></div>
+        <div class="hero-content flex-col lg:flex-row-reverse max-w-7xl w-full px-10 gap-8">
+            
+            <div class="flex-1 text-left p-10">
+                <p class="hero-reveal delay-1 text-gold font-bold tracking-widest uppercase mb-2 text-lg">SOLAR ENERGY</p>
+                <h1 class="hero-reveal delay-2 mb-4 text-4xl lg:text-6xl font-serif leading-tight">
+                    SOLAR ENERGY
+                </h1>
+               <h3 class="hero-reveal delay-2 mb-4 text-2xl lg:text-4xl font-serif leading-tight">Portable Solar Power Solutions for Homes, Communities, and Industries
+              <br> Outdoor Solar Kits for Remote and Off-Grid Applications</h3>
+            </div>
+        </div>
+    </div>
+
+      
+      <section class="bg-gray-50 py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Solar Power Solutions</h2>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                    <div class="bg-blue-600 p-8 text-white">
+                        <h3 class="text-2xl font-bold">Portable Solar Power</h3>
+                        <p class="mt-2 opacity-90 italic">Enjoy the endless power of the sun anywhere and anytime</p>
+                    </div>
+                    
+                    <div class="p-8 flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold uppercase">Compact</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold uppercase">Lightweight</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold uppercase">10+ Year Lifetime</span>
+                        </div>
+    
+                        <p class="text-gray-600 mb-6">Our Solar Power Source Case ensures clean, safe, and efficient energy for camping, boating, or field work.</p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✔</span>
+                                <div><strong>Environment-friendly:</strong> Uses LiFePO4 batteries for zero $CO_2$ emissions.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✔</span>
+                                <div><strong>Fashionable Case:</strong> Elegant aluminum suitcase-style design.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✔</span>
+                                <div><strong>Safe & Durable:</strong> Deep cycle performance for long-lasting use.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col border-2 border-blue-500">
+                    <div class="bg-gray-900 p-8 text-white relative">
+                        <span class="absolute top-4 right-4 bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded">ALL-IN-ONE</span>
+                        <h3 class="text-2xl font-bold text-yellow-400">Multi-function Solar Kit</h3>
+                        <p class="mt-2 opacity-90 italic">Never be without power outdoors</p>
+                    </div>
+                    
+                    <div class="p-8 flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold uppercase">100W Foldable Panel</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold uppercase">18kg Total</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold uppercase">20+ Year Lifetime</span>
+                        </div>
+    
+                        <p class="text-gray-600 mb-6">A complete 100W plug-and-play system supplying 5V/12V DC and 220V/240V AC power for all your appliances.</p>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                            <h4 class="font-bold text-gray-800 mb-2">Included Emergency Kit:</h4>
+                            <p class="text-sm text-gray-600">LED lights, air compressor, USB charger, digital projector, and starter cables for boat/car.</p>
+                        </div>
+    
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2">★</span>
+                                <div><strong>Plug and Play:</strong> Panel plugs directly into the pack for immediate charging.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-500 mr-2">★</span>
+                                <div><strong>Versatile:</strong> Powers TVs, laptops, and yacht equipment effortlessly.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+
+    
+
+{% endblock %}

@@ -1,0 +1,299 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcotec | Fit-Out Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .text-gold { color: #D4AF37; }
+        .bg-gold { background-color: #D4AF37; }
+        .border-gold { border-color: #D4AF37; }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        /* The base animation class for items already in view (Hero) */
+        .hero-reveal {
+          opacity: 0;
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Scroll-triggered reveal class */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Staggered delays */
+        .delay-1 { animation-delay: 0.2s; transition-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; transition-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; transition-delay: 0.6s; }
+        .delay-4 { transition-delay: 0.8s; }
+
+        /* Container for the header */
+.custom-header {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  background-color: #f0f4f8; /* Light background to see the effect */
+  overflow: hidden;
+}
+
+/* Base style for the swoosh layers */
+.swoosh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* The Blue (Top-most) Layer */
+.blue-swoosh {
+  background-color: #1a237e; /* Deep Blue */
+  /* This creates the sharp curve from the top left */
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 85%);
+  /* For a smoother curve, we use a border-radius trick or SVG */
+  border-bottom-right-radius: 80% 100%;
+  z-index: 2;
+}
+
+/* The Orange (Middle) Layer */
+.orange-swoosh {
+  background-color: #ffb300; /* Golden Orange */
+  width: 110%; /* Slightly wider to peak out */
+  height: 110%;
+  border-bottom-right-radius: 70% 100%;
+  transform: translate(-5%, -5%);
+  z-index: 1;
+}
+
+/* Content Area */
+.content {
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+}
+    </style>
+</head>
+<body class="bg-base-100">
+    {% include 'includes/navbar.html' %}
+
+    <header class="custom-header">
+        <div class="swoosh orange-swoosh"></div>
+        <div class="swoosh blue-swoosh"></div>
+        <div class="content">
+          </div>
+      </header>
+
+    <div class="hero min-h-80 bg-slate-900 text-white relative overflow-hidden" style=" background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80'); background-blend-mode: overlay; background-size: cover;">
+        <div class="hero-overlay bg-opacity-70"></div>
+        <div class="hero-content flex-col lg:flex-row-reverse max-w-7xl w-full px-10 gap-8">
+            <div class="flex-1 flex justify-center lg:justify-end">
+                <div class="relative group">
+                    <div class="hero-reveal delay-1 absolute -top-3 -right-3 w-full h-full border border-gold rounded-lg hidden lg:block opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80" 
+                         class="hero-reveal delay-1 max-w-xs rounded-lg shadow-2xl border-2 border-slate-700 relative z-10" 
+                         alt="Modern Office Fitout" />
+                </div>
+            </div>
+            <div class="flex-1 text-left p-10">
+                <p class="hero-reveal delay-1 text-gold font-bold tracking-widest uppercase mb-2 text-sm">Fit Out Construction</p>
+                <h1 class="hero-reveal delay-2 mb-4 text-4xl lg:text-6xl font-serif leading-tight">
+                    Transform spaces into a <span class="text-gold">ready-made environment</span>.
+                </h1>
+                <p class="hero-reveal delay-3 mb-6 text-lg text-slate-300 max-w-xl">
+                    At Celcotec, we specialize in comprehensive fit-out solutions for offices, homes, and businesses, perfectly tailored to your needs.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-10 px-4 max-w-7xl mx-auto bg-base-100">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-4xl font-bold text-slate-900 uppercase tracking-wide">Our Scope of Work</h2>
+        <div class="w-24 h-1 bg-[#D4AF37] mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="reveal delay-1 card rounded-none bg-white shadow-lg border-t-4 border-[#D4AF37] hover:-translate-y-2 transition-all duration-300">
+          <div class="card-body">
+            <h3 class="card-title text-slate-900 font-bold uppercase mb-4">Architectural & Interior Finishes</h3>
+            <ul class="list-disc list-inside text-slate-800 text-xl space-y-2 font-serif">
+              <li>Ceilings, Flooring, & Paint Works</li>
+              <li>Walls (Gypsum, Glass, Acoustic)</li>
+              <li>Doors & Staircases</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reveal delay-2 card rounded-none bg-slate-900 text-white shadow-lg border-t-4 border-[#D4AF37] hover:-translate-y-2 transition-all duration-300">
+          <div class="card-body">
+            <h3 class="card-title text-[#D4AF37] font-bold uppercase mb-4">Space Planning & Areas</h3>
+            <ul class="list-disc list-inside text-xl text-slate-200 space-y-2 font-serif">
+              <li>Reception Areas & Lobbies</li>
+              <li>Bathrooms & Toilets</li>
+              <li>Elevator Shafts</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reveal delay-3 card rounded-none bg-white shadow-lg border-t-4 border-[#D4AF37] hover:-translate-y-2 transition-all duration-300">
+          <div class="card-body">
+            <h3 class="card-title text-slate-900 font-bold uppercase mb-4">Furniture & Fixtures</h3>
+            <ul class="list-disc list-inside text-slate-800 space-y-2 text-xl font-serif">
+              <li>Tables and Chairs</li>
+              <li>Custom Cabinets</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reveal delay-1 card rounded-none bg-white shadow-lg border-t-4 border-[#D4AF37] hover:-translate-y-2 transition-all duration-300 lg:col-start-1">
+          <div class="card-body">
+            <h3 class="card-title text-slate-900 font-bold uppercase mb-4">Technical & Engineering</h3>
+            <ul class="list-disc list-inside text-slate-800 space-y-2 text-xl font-serif">
+              <li>Electrical Works</li>
+              <li>CCTV Installation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reveal delay-2 card rounded-none bg-white shadow-lg border-t-4 border-[#D4AF37] md:col-span-2 lg:col-span-2 hover:-translate-y-2 transition-all duration-300">
+          <div class="card-body">
+            <h3 class="card-title text-slate-900 font-bold uppercase mb-4">Project Management & Compliance</h3>
+            <p class="text-slate-800 text-xl font-serif leading-relaxed">
+              Full turnkey solutions including securing permits, licenses, and insurance to ensure your operations meet all legal requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="py-16 bg-white border-y border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 reveal delay-1">
+        
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div class="bg-slate-200 aspect-video rounded-lg overflow-hidden border border-slate-300">
+            <img src="{% static 'fitout/foc-pgal-offshrbiz-managers-rm-2.jpg' %}" 
+                 alt="Manager's Room" 
+                 class="w-full h-full object-cover">
+        </div>
+    
+        <div class="bg-slate-200 aspect-video rounded-lg overflow-hidden border border-slate-300">
+            <img src="{% static 'fitout/foc-pgal-d-link-confrm.jpg' %}" 
+                 alt="Conference Area" 
+                 class="w-full h-full object-cover">
+        </div>
+    
+        <div class="bg-slate-200 aspect-video rounded-lg overflow-hidden border border-slate-300">
+            <img src="{% static 'fitout/foc-pgal-wkstation-area-5.jpg' %}" 
+                 alt="Workstation Areas" 
+                 class="w-full h-full object-cover">
+        </div>
+    
+        <div class="bg-slate-200 aspect-video rounded-lg overflow-hidden border border-slate-300">
+            <img src="{% static 'fitout/foc-pgal-offshrbiz-pantry.jpg' %}" 
+                 alt="Pantries & Lounges" 
+                 class="w-full h-full object-cover">
+        </div>
+    </div>
+
+        <div class="font-serif text-2xl text-black pb-8">
+            We have outfitted not just a room but entire floors of offices, including:
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12 pl-4 md:pl-12">
+            <div class="reveal delay-1">
+                <ul class="list-disc ml-5 font-serif text-xl font-bold text-slate-900 space-y-2 marker:text-[#D4AF37]">
+                    <li>Manager's Rooms</li>
+                    <li>Conference Rooms</li>
+                </ul>
+            </div>
+
+            <div class="reveal delay-2">
+                <ul class="list-disc ml-5 font-serif text-xl font-bold text-slate-900 space-y-2 marker:text-[#D4AF37]">
+                    <li>Workstation Areas</li>
+                    <li>Hallways</li>
+                </ul>
+            </div>
+
+            <div class="reveal delay-3">
+                <ul class="list-disc ml-5 font-serif text-xl font-bold text-slate-900 space-y-2 marker:text-[#D4AF37]">
+                    <li>Pantries & Lounges</li>
+                    <li>Reception Areas</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-10 px-4 max-w-4xl mx-auto reveal">
+  <div class="overflow-hidden bg-white rounded-lg shadow-xl border border-slate-100">
+      <table class="table table-zebra w-full">
+          <thead>
+              <tr class="bg-slate-900 text-white">
+                  <th class="py-5 text-xl text-center uppercase tracking-wider">
+                     Our Fit Out Construction Clients
+                  </th>
+              </tr>
+          </thead>
+          
+          <tbody class="text-slate-700 font-serif">
+              <tr class="hover:bg-slate-100 transition-colors">
+                  <td class="py-4 px-8 text-lg">Department of Labor and Employment</td>
+              </tr>
+              <tr class="hover:bg-slate-100 transition-colors">
+                  <td class="py-4 px-8 text-lg">Great Pacific Life</td>
+              </tr>
+              <tr class="hover:bg-slate-100 transition-colors">
+                  <td class="py-4 px-8 text-lg">Villa Feliza Residence</td>
+              </tr>
+              <tr class="hover:bg-slate-100 transition-colors">
+                  <td class="py-4 px-8 text-lg">Mandaluyong Residence</td>
+              </tr>
+              <tr class="hover:bg-slate-100 transition-colors">
+                  <td class="py-4 px-8 text-lg">Other Residences</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</section>
+
+    {% include 'includes/footer.html' %}
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

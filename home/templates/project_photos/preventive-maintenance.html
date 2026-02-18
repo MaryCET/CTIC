@@ -1,0 +1,310 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celcotec | Preventive Maintenance</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom smooth transition for masonry items */
+        .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans">
+  {% include 'includes/navbar.html' %}
+
+  <header class="py-8 max-w-7xl mx-auto">
+    <h1 class="text-3xl md:text-4xl px-4 font-bold text-[#1e3a5f] font-serif uppercase tracking-tight inline-block pb-1">
+        Preventive Maintenance
+    </h1>
+    <h3 class="text-xl md:text-1xl px-4 font-bold font-medium">List of past projects</h3>
+</header>
+    <main class="max-w-7xl mx-auto px-4 space-y-3 pb-20">
+
+        <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-black">BDO Annual Electrical Preventive Maintenance</h2>
+
+<!--For Bulding 1-->
+
+<section class="bg-white rounded-none p-6 shadow-xl shadow-slate-200/50 border border-slate-100">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+        <div>
+            <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-black">Greenhills Building 1</h2>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-b1-rdk-pmaint-aft-01.jpg' %}" alt="Fit-out 1" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Roof Deck
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-b1-rdk-pmaint-dur-03.jpg' %}" alt="Fit-out 2" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Roof Deck
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-b1-rdk-tftest-dur-12.jpg' %}" alt="Fit-out 3" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    3.5KVA Transformer Testing
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-b1-rdk-tftest-dur-14.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    3.5KVA Transformer Testing
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg1-eroom-brktest.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Electrical Room
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg1-eroom-drg-04.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Electrical Room
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg1-srvr2nd-01.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    2nd Floor Server Room
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg1-srvr2nd-02.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    2nd Floor Server Room
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg1-upsroom-08.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    UPS Room
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg1-upsroom-09.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    UPS Room
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg1-x4mer-04.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Transformer Testing
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg1-x4mer-17.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Transformer Testing
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!--For Bulding 2-->
+
+<section class="bg-white rounded-none p-6 shadow-xl shadow-slate-200/50 border border-slate-100">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+        <div>
+            <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-black">Greenhills Building 2</h2>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg2-3flr-03.jpg' %}" alt="Fit-out 1" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Panel Preventive Maintenance
+
+
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg2-3flr-04.jpg' %}" alt="Fit-out 2" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Panel Preventive Maintenance
+
+
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg2-4flr-03.jpg' %}" alt="Fit-out 3" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Meter Center
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg2-4flr-07.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Meter Center
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg2-mtrctr-03.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Fourth Floor
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg2-mtrctr-04.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Fourth Floor
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg2-panelmaint-04.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Third Floor
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-white border border-slate-100 shadow-sm">
+            <div class="overflow-hidden h-64">
+                <img src="{% static 'project-photos/pgal-bdo-ghills-bldg2-panelmaint-07.jpg' %}" alt="Fit-out 4" 
+                     class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-4 bg-slate-50 border-t border-slate-100 h-24 flex items-start overflow-hidden">
+                <p class="text-[14px] text-gray-500 italic font-serif leading-relaxed">
+                    Third Floor
+                </p>
+            </div>
+        </div>
+
+        
+
+    </div>
+</section>
+
+  </main>
+    
+{% include 'includes/footer.html' %}
+
+
+</body>
+</html>
