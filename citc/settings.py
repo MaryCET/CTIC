@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-pih^f=0t#6dm)&2@^o4!x-l$bobo7#=v8z_j$nme8b3s*1*uo^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
 
+ALLOWED_HOSTS = ['yourusername.pythonanywhere.com']
 
 # Application definition
 
@@ -127,11 +127,15 @@ USE_TZ = True
 # Make sure BASE_DIR is defined at the top
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# This is where Django will COLLECT all static files for production
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# This is the URL used to access these files in the browser
 STATIC_URL = 'static/'
 
-# Add this to tell Django to look in your root static folder
+# These are the extra places where you manually store CSS/JS
 STATICFILES_DIRS = [
-    BASE_DIR / "static", 
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 # Default primary key field type
