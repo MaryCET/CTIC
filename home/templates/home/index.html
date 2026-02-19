@@ -2,234 +2,279 @@
 {% load static %}
 
 {% block content %}
-<header class="relative h-[60vh] w-full overflow-hidden bg-black">
-    
-    <div class="absolute inset-0 z-0">
-        <img 
-            src="{% static 'home/images/CTIC_slide1.png' %}" 
-            /* 'min-w-full min-h-full' ensures no gaps, 'object-center' keeps the focus */
-            class="absolute min-w-full min-h-full w-auto h-auto object-cover left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-slow-zoom" 
-            alt="Engineering Background"
-        >
-        <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent"></div>
-    </div>
-    
-    <div class="relative z-10 flex h-full items-center px-6 sm:px-12 md:px-20">
-        <div class="max-w-[95%] md:max-w-6xl">
-            
-            <p class="hero-reveal text-[clamp(0.7rem,1.5vw,1rem)] font-bold tracking-[0.2em] text-[#FFD700] uppercase mb-4 drop-shadow-md">
-                Electrical, Mechanical, and Civil Engineering Contractor and Designer
-            </p>
-    
-            <h1 class="hero-reveal delay-1 text-[clamp(2rem,6vw,4.5rem)] font-serif text-white leading-[1.1] mb-6 drop-shadow-lg">
-                CELCOTEC INDUSTRIAL CORP.
-            </h1>
-    
-            <p class="hero-reveal delay-2 text-[clamp(0.8rem,1.2vw,1.1rem)] font-medium text-gray-300 tracking-widest uppercase mb-10 max-w-2xl border-l-4 border-[#FFD700] pl-4">
-                A Full-Service Engineering Company
-            </p>
-    
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="{% url 'project_list' %}" class="hero-reveal delay-3 inline-flex items-center justify-center px-8 py-4 border-2 border-white/50 text-white font-bold uppercase tracking-wider text-xs transition-all duration-300 hover:border-[#FFD700] hover:text-[#FFD700] backdrop-blur-sm">
-                    Project List
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-  </header>
 
- <!-- ABOUT SECTION-->
-    <section class="w-full py-16 bg-white fade-in-section">
-        <div class="max-w-7xl mx-auto px-4 md:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10 items-start">
-            
-            <div class="relative group">
-              <div class="flex overflow-x-auto snap-x snap-mandatory shadow-2xl scroll-smooth no-scrollbar">
-                <div id="slide1" class="flex-none w-full snap-center">
-                    <img src="{% static 'home/images/CTIC_slide1.png' %}" class="w-full aspect-[4/3] object-cover" alt="CITC Logo">
-                </div>
-                <div id="slide2" class="flex-none w-full snap-center">
-                  <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" class="w-full aspect-[4/3] object-cover" alt="Technical Implementation" />
-                </div>
-                <div id="slide3" class="flex-none w-full snap-center">
-                  <img src="https://images.unsplash.com/photo-1498758536662-35b82cd15e29" class="w-full aspect-[4/3] object-cover" alt="Project Management" />
-                </div>
-              </div>
-      
-              <div class="flex justify-center w-full py-6 gap-3">
-                <a href="#slide1" class="w-3 h-3 rounded-full bg-blue-700/30 hover:bg-blue-700 transition-colors"></a> 
-                <a href="#slide2" class="w-3 h-3 rounded-full bg-blue-700/30 hover:bg-blue-700 transition-colors"></a> 
-                <a href="#slide3" class="w-3 h-3 rounded-full bg-blue-700/30 hover:bg-blue-700 transition-colors"></a>
-              </div>
-            </div>
-      
-            <div class="space-y-2">
-              <div class="space-y-1">
-               
-                <h3 class="text-1xl md:text-2xl font-arial font-bold text-base-content uppercase leading-tight">
-                    Cornerstone of Strength and Reliability since 1994
-                </h3>
-              </div>
-              <p class="text-xl text-black leading-relaxed font-medium" style="font-family: 'Playfair Display', serif;">
-                Since 1994, Celcotec has been a trusted partner for leading builders, developers, and architects. As a cornerstone of technical excellence in electrical, civil, and mechanical works, Celcotec offers a comprehensive suite of general construction services—ranging from engineering design and consultancy to full-scale contracting.
-                <br />
-                Our core expertise in electrical engineering covers electrical construction projects, rehabilitation of medium and low voltage, distribution lines, low voltage switchgear, 5MVA outdoor substation, electrical design, rewiring and upgrading.
-                <br />
-                Celcotec is an accredited member of the Society of Philippine Electrotechnical Constructors and Suppliers, Inc. (SPECS).
-              </p>
-            </div>
-      
+
+<style>
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        will-change: opacity, visibility;
+    }
+    .fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+    }
+</style>
+
+<header class="relative h-[65vh] w-full overflow-hidden bg-black font-sans">
+  <div class="absolute inset-0 z-0">
+      <img 
+          src="{% static 'home/images/CTIC_slide1.png' %}" 
+          class="absolute min-w-full min-h-full w-auto h-auto object-cover left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-slow-zoom" 
+          alt="Engineering Background"
+      >
+      <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent"></div>
+  </div>
+
+
+  <div class="absolute top-10 left-10 z-20 hidden md:block pointer-events-none">
+      <div class="w-12 h-12 border-t border-l border-white/20"></div>
+  </div>
+  
+  <div class="relative z-10 flex h-full items-center px-6 sm:px-12 md:px-20 pb-20">
+      <div class="max-w-[95%] md:max-w-6xl">
+          <p class="hero-reveal text-[clamp(0.7rem,1vw,0.85rem)] font-bold tracking-[0.25em] text-yellow-500 uppercase mb-4 drop-shadow-md">
+              Electrical • Mechanical • Civil • Design
+          </p>
+
+          <h1 class="hero-reveal delay-1 font-serif text-[clamp(2.25rem,7vw,5rem)] tracking-tight text-white leading-[1.05] mb-6 drop-shadow-2xl">
+              Celcotec Industrial Corp.
+          </h1>
+  
+          <p class="hero-reveal delay-2 text-[clamp(0.9rem,1.3vw,1.15rem)] font-semibold uppercase text-gray-200 mb-10 max-w-2xl border-l-2 border-yellow-500 pl-6 leading-relaxed">
+              A Full-Service Engineering Company
+          </p>
+  
+          <div class="flex flex-col sm:flex-row gap-4">
+              <a href="{% url 'project_list' %}" class="hero-reveal delay-3 inline-flex items-center justify-center px-10 py-4 border border-white/40 text-white font-semibold uppercase tracking-[0.15em] text-[0.7rem] transition-all duration-500 hover:bg-yellow-500 hover:border-yellow-500 hover:text-black backdrop-blur-sm">
+                  View Project List
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+              </a>
           </div>
-        </div>
-      </section>
-      <!-- SERVICES SECTION-->
-      <section class=" bg-white py-10">
-        <div class="max-w-7xl mx-auto px-4 md:px-8">
-          <h1 class="text-4xl p-5 mb-6 font-bold uppercase text-center text-base-content">WHAT WE OFFER</h1>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-            
-            <div class="card bg-base-100 shadow-sm transition-transform hover:-translate-y-2 border-0">
-              <figure>
-                <img src="{% static 'home/images/CTIC_ElectricalWorks_1.png' %}" 
-     alt="Electrical Works" 
-     class="w-full object-cover h-48" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title uppercase font-bold">Electrical Works</h2>
-                <p class="text-xl text-black leading-relaxed font-medium" style="font-family: 'Playfair Display', serif;">Our core expertise in electrical engineering covers electrical construction projects, rehabilitation of medium and low voltage, distribution lines, 
-                    low voltage switchgear, 5MVA outdoor substation, electrical design, rewiring and upgrading.</p>
-              </div>
-            </div>
-      
-            <div class="card bg-base-100 shadow-sm transition-transform hover:-translate-y-2">
-              <figure>
-                <img src="{% static 'home/images/CTIC_CivilWorks.jpg' %}" 
-     alt="Civil Works" 
-     class="w-full object-cover h-48" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title uppercase font-bold">Civil Works</h2>
-                <p class="text-xl text-black leading-relaxed font-medium" style="font-family: 'Playfair Display', serif;">We hold a license from the Philippine Contractors Accreditation Board (PCAB) and an Inter-Agency Certificate to handle works on public infrastructure such as roads, railroads, and bridges;
-                    Manufacturing plants; low, medium, and high-rise buildings.</p>
-                
-              </div>
-            </div>
-      
-            <div class="card bg-base-100 shadow-sm transition-transform hover:-translate-y-2">
-                <figure>
-                    <img src="{% static 'home/images/CTIC_GeneralConstruction.png' %}" 
-         alt="General Construction" 
-         class="w-full object-cover h-48" />
-                  </figure>
-              <div class="card-body">
-                <h2 class="card-title uppercase font-bold">General Construction</h2>
-                <p class="text-xl text-black leading-relaxed font-medium" style="font-family: 'Playfair Display', serif;">Expert construction and engineering works involving iron, steel, wood, masonry, and earthworks. We deliver durable structural solutions from the ground up.</p>
-                
-              </div>
-            </div>
-      
-            <div class="card bg-base-100 shadow-sm transition-transform hover:-translate-y-2">
-              <figure>
-                <img src="{% static 'home/images/CTIC_RenewableEnergy.jpg' %}" 
-     alt="Renewable Energy" 
-     class="w-full object-cover h-48" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title uppercase font-bold">Renewable Energy</h2>
-                <p class="text-xl text-black leading-relaxed font-medium" style="font-family: 'Playfair Display', serif;">We provide all kinds of power-generation solutions harnessing solar, solar-wind, and hydroelectric energy. We can design and custom-tailor solutions specific to customer needs,
-                   eliminating extraneous installation expenses. We also provide turn-key and onsite solutions.</p>
-              
-              </div>
-            </div>
-      
-            <div class="card bg-base-100 shadow-sm transition-transform hover:-translate-y-2">
-              <figure>
-                <img src="{% static 'home/images/CTIC_Telecommunication.jpg' %}" 
-     alt="Telecommunication" 
-     class="w-full object-cover h-48" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title uppercase font-bold">Telecommunication</h2>
-                <p class="text-xl text-black leading-relaxed font-medium" style="font-family: 'Playfair Display', serif;">We also supply and install voice and data systems and security systems, including closed circuit television system (CCTV), voice and data system, outside and inside plant system, telephone switchboards (PABX and KTS), 
-                  intercom system, MDF, MMTC and TTC, local area network cabling and distribution system.</p>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-     <!-- MISSION & VISION SECTION -->
-      <section class=" bg-white py-16">
+      </div>
+  </div>
+
+  <div class="absolute bottom-0 left-0 w-full z-20 border-t border-white/10 bg-[#3b5998]/40 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 md:px-20 py-6 flex justify-between items-center text-white/90 uppercase tracking-widest text-[0.6rem] md:text-[0.7rem]">
         
-
-        <div class="max-w-6xl mx-auto px-4">
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-                
-                <div class="group p-8 border-2 border-gray-100 rounded-lg hover:border-[#000080] transition-colors duration-300 flex flex-col">
-                    <div class="inline-block mb-4">
-                        <h3 class="text-2xl font-bold text-base-content uppercase leading-tight">
-                            Mission
-                        </h3>
-                        <div class="h-1 w-full bg-[#FFD700] mt-2"></div>
-                    </div>
-                    
-                    <div class="text-base-content leading-relaxed pt-4 border-t border-gray-100 flex-grow">
-                      
-                        
-                        <ul class="space-y-6 mb-6">
-                            <li class="flex items-start">
-                                <span class="flex-shrink-0 w-6 h-6 bg-[#000080] rounded-full flex items-center justify-center mt-1 shadow-md">
-                                    <svg class="w-3 h-3 text-[#FFD700]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="4">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                </span>
-                                <span class="ml-4 font-serif text-lg">Achieve satisfactory and timely completion of the assigned project with the utmost regard and observance of professional ethics and standards and with the ultimate goal of earning the commendation and highest recommendation from our clientele both in the private and public sectors.</span>
-                            </li>
- 
-                        </ul>
-    
-                       
-                    </div>
-                </div>
-    
-                <div class="group p-8 border-2 border-gray-100 rounded-lg hover:border-[#000080] transition-colors duration-300 bg-white flex flex-col">
-                    <div class="inline-block mb-6">
-                        <h3 class="text-2xl font-bold  text-base-content uppercase leading-tight">
-                            Vision
-                        </h3>
-                        <div class="h-1 w-full bg-[#FFD700] mt-1"></div>
-                    </div>
-    
-                    <ul class="space-y-6 mb-6">
-                      <li class="flex items-start">
-                          <span class="flex-shrink-0 w-6 h-6 bg-[#000080] rounded-full flex items-center justify-center mt-1 shadow-md">
-                              <svg class="w-3 h-3 text-[#FFD700]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="4">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-                              </svg>
-                          </span>
-                          <span class="ml-4 font-serif text-lg">To become one of the leading, reputable, reliable, professional construction and engineering companies in the country and to train and be staffed by the most competent management, technical, and marketing professionals.</span>
-                      </li>
-
-                  </ul>
-                    
-                    <div class="mt-auto pt-8 flex justify-end">
-                        <svg class="w-12 h-12 text-gray-100" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                        </svg>
-                    </div>
-                </div>
-    
-            </div>
+        <div class="flex flex-col md:flex-row md:items-center gap-1 md:gap-4">
+            <span class="text-yellow-500 font-serif text-xl md:text-2xl leading-none">15+</span>
+            <span class="max-w-[80px] md:max-w-none leading-tight">Years in Industry</span>
         </div>
-    </section>
+
+        <div class="h-8 w-[1px] bg-white/10 hidden sm:block"></div>
+
+        <div class="flex flex-col md:flex-row md:items-center gap-1 md:gap-4">
+            <span class="text-yellow-500 font-serif text-xl md:text-2xl leading-none">PCAB</span>
+            <span class="max-w-[80px] md:max-w-none leading-tight">Accredited Contractor</span>
+        </div>
+
+        <div class="h-8 w-[1px] bg-white/10 hidden sm:block"></div>
+
+        <div class="flex flex-col md:flex-row md:items-center gap-1 md:gap-4">
+            <span class="text-yellow-500 font-serif text-xl md:text-2xl leading-none">Meralco</span>
+            <span class="max-w-[80px] md:max-w-none leading-tight">Certified Partner</span>
+        </div>
+
+    </div>
+</div>
+</header>
+ <!-- ABOUT SECTION-->
+ <section class="w-full py-20 bg-white fade-in-section">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <div class="relative w-full aspect-[16/10] overflow-hidden shadow-2xl group/main">
+              <img 
+                  src="{% static 'home/images/CTIC_works.jpg' %}" 
+                  class="absolute w-full h-full object-cover transition-transform duration-[5000ms] group-hover/main:scale-110" 
+                  alt="Engineering Projects"
+              >
+        
+              <div class="absolute inset-0 grid grid-cols-2 grid-rows-2">
+                  <div class="relative group cursor-help border-r border-b border-white/10 overflow-hidden">
+                      <div class="absolute inset-x-0 bottom-0 bg-blue-900/80 translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-4">
+                          <h3 class="text-white font-bold text-sm uppercase">Supply and wiring Installation</h3>
+                          <p class="text-blue-100 text-[10px]">PHirst Park Homes, General Trias, Cavite</p>
+                      </div>
+                  </div>
+        
+                  <div class="relative group cursor-help border-b border-white/10 overflow-hidden">
+                      <div class="absolute inset-x-0 bottom-0 bg-slate-900/80 translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-4">
+                          <h3 class="text-white font-bold text-sm uppercase">Supply and installation of Overhead Distribution Lines</h3>
+                          <p class="text-blue-100 text-[10px]">Stoneworks Specialist International Inc.</p>
+                      </div>
+                  </div>
+        
+                  <div class="relative group cursor-help border-r border-white/10 overflow-hidden">
+                      <div class="absolute inset-x-0 bottom-0 bg-blue-900/80 translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-4">
+                          <h3 class="text-white font-bold text-sm uppercase">Installation of ABB ESE Lightning Protection System</h3>
+                          <p class="text-blue-100 text-[10px]">BASA Airbase, Floridablanca, Pampanga</p>
+                      </div>
+                  </div>
+        
+                  <div class="relative group cursor-help overflow-hidden">
+                      <div class="absolute inset-x-0 bottom-0 bg-slate-900/80 translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-4">
+                          <h3 class="text-white font-bold text-sm uppercase">18.4kWp Solar Installation</h3>
+                          <p class="text-blue-100 text-[10px]">Jestre Residence, Pateros, Manila</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="flex flex-col justify-center">
+              <div class="space-y-4">
+                  <div class="space-y-1">
+                      <p class="text-yellow-600 font-bold uppercase tracking-widest text-sm">Established in 1994</p>
+                      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 uppercase leading-tight">
+                          Cornerstone of Strength <br class="hidden lg:block"> and Reliability
+                      </h2>
+                  </div>
+                  
+                  <div class="text-xl text-black leading-relaxed space-y-4" style="font-family: 'Playfair Display', serif;">
+                      <p>
+                          Since 1994, Celcotec has been a trusted partner for leading builders, developers, and architects. As a cornerstone of technical excellence in electrical, civil, and mechanical works, Celcotec offers a comprehensive suite of general construction services—ranging from engineering design and consultancy to full-scale contracting.
+                      </p>
+                      <p>
+                          Our core expertise in electrical engineering covers electrical construction projects, rehabilitation of medium and low voltage, distribution lines, low voltage switchgear, 5MVA outdoor substation, and electrical design.
+                      </p>
+                      <p class="pt-2 italic border-l-4 border-blue-900 pl-4">
+                          Celcotec is an accredited member of the <span class="font-bold text-blue-900 not-italic">Society of Philippine Electrotechnical Constructors and Suppliers, Inc. (SPECS)</span>
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+      </div> </div>
+</section>
+
+<section class="bg-slate-50 py-16 fade-in-section">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <div class="text-center mb-20">
+      <h1 class="text-blue-950 font-semibold tracking-wide uppercase">Our Expertise</h1>
+      <h1 class="text-4xl md:text-5xl font-bold mt-2 text-slate-900 uppercase">What We Offer</h1>
+      <div class="h-1 w-20 bg-blue-700 mx-auto mt-4"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-10">
+      
+      <div class="card bg-white shadow-xl rounded-none group">
+        <figure class="relative overflow-visible">
+          <img src="{% static 'home/images/CTIC_ElectricalWorks_1.png' %}" alt="Electrical Works" class="w-full object-cover h-64 transition-transform duration-500 group-hover:brightness-110" />
+          
+          <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[85%] z-10 drop-shadow-lg transition-transform group-hover:scale-105">
+            <div class="bg-[#FFD700] text-slate-900 py-3 px-6 font-bold text-lg uppercase tracking-wider text-center"
+                 style="clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);">
+              Electrical Works
+            </div>
+            <div class="absolute -bottom-1 left-2 w-4 h-4 bg-amber-600 -z-10" style="clip-path: polygon(0 0, 100% 0, 100% 100%);"></div>
+          </div>
+        </figure>
+        <div class="card-body items-center text-center pt-12 pb-8">
+          <p class="text-slate-600 leading-relaxed font-light text-lg" style="font-family: 'Playfair Display', serif;">
+            Core expertise in electrical engineering including construction, rehabilitation of voltage lines, 5MVA substations, and comprehensive design upgrades.
+          </p>
+          <div class="mt-4">
+            <a href="#" class="font-bold text-slate-900 hover:text-indigo-600 transition-colors">Read More &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-white shadow-xl rounded-none group">
+        <figure class="relative overflow-visible">
+          <img src="{% static 'home/images/CTIC_CivilWorks.jpg' %}" alt="Civil Works" class="w-full object-cover h-64 transition-transform duration-500 group-hover:brightness-110" />
+          <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[85%] z-10 drop-shadow-lg transition-transform group-hover:scale-105">
+            <div class="bg-[#FFD700] text-slate-900 py-3 px-6 font-bold text-lg uppercase tracking-wider text-center"
+                 style="clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);">
+              Civil Works
+            </div>
+            <div class="absolute -bottom-1 left-2 w-4 h-4 bg-amber-600 -z-10" style="clip-path: polygon(0 0, 100% 0, 100% 100%);"></div>
+          </div>
+        </figure>
+        <div class="card-body items-center text-center pt-12 pb-8">
+          <p class="text-slate-600 leading-relaxed font-light text-lg" style="font-family: 'Playfair Display', serif;">
+            PCAB-licensed and Inter-Agency certified for public infrastructure. We handle roads, bridges, manufacturing plants, and high-rise developments.
+          </p>
+          <div class="mt-4">
+            <a href="#" class="font-bold text-slate-900 hover:text-indigo-600 transition-colors">Read More &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-white shadow-xl rounded-none group">
+        <figure class="relative overflow-visible">
+          <img src="{% static 'home/images/CTIC_GeneralConstruction.png' %}" alt="General Construction" class="w-full object-cover h-64 transition-transform duration-500 group-hover:brightness-110" />
+          <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[85%] z-10 drop-shadow-lg transition-transform group-hover:scale-105">
+            <div class="bg-[#FFD700] text-slate-900 py-3 px-6 font-bold text-lg uppercase tracking-wider text-center"
+                 style="clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);">
+              Construction
+            </div>
+            <div class="absolute -bottom-1 left-2 w-4 h-4 bg-amber-600 -z-10" style="clip-path: polygon(0 0, 100% 0, 100% 100%);"></div>
+          </div>
+        </figure>
+        <div class="card-body items-center text-center pt-12 pb-8">
+          <p class="text-slate-600 leading-relaxed font-light text-lg" style="font-family: 'Playfair Display', serif;">
+            Expert engineering across iron, steel, masonry, and earthworks. We deliver durable, high-quality structural solutions from the ground up.
+          </p>
+          <div class="mt-4">
+            <a href="#" class="font-bold text-slate-900 hover:text-indigo-600 transition-colors">Read More &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-white shadow-xl rounded-none group lg:col-start-1">
+        <figure class="relative overflow-visible">
+          <img src="{% static 'home/images/CTIC_RenewableEnergy.jpg' %}" alt="Renewable Energy" class="w-full object-cover h-64 transition-transform duration-500 group-hover:brightness-110" />
+          <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[85%] z-10 drop-shadow-lg transition-transform group-hover:scale-105">
+            <div class="bg-[#FFD700] text-slate-900 py-3 px-6 font-bold text-lg uppercase tracking-wider text-center"
+                 style="clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);">
+              Renewable Energy
+            </div>
+            <div class="absolute -bottom-1 left-2 w-4 h-4 bg-amber-600 -z-10" style="clip-path: polygon(0 0, 100% 0, 100% 100%);"></div>
+          </div>
+        </figure>
+        <div class="card-body items-center text-center pt-12 pb-8">
+          <p class="text-slate-600 leading-relaxed font-light text-lg" style="font-family: 'Playfair Display', serif;">
+            Custom-tailored solar, wind, and hydro solutions. We provide turn-key onsite power generation designed to eliminate unnecessary overhead.
+          </p>
+          <div class="mt-4">
+            <a href="#" class="font-bold text-slate-900 hover:text-indigo-600 transition-colors">Read More &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-white shadow-xl rounded-none group">
+        <figure class="relative overflow-visible">
+          <img src="{% static 'home/images/CTIC_Telecommunication.jpg' %}" alt="Telecommunication" class="w-full object-cover h-64 transition-transform duration-500 group-hover:brightness-110" />
+          <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[85%] z-10 drop-shadow-lg transition-transform group-hover:scale-105">
+            <div class="bg-[#FFD700] text-slate-900 py-3 px-6 font-bold text-lg uppercase tracking-wider text-center"
+                 style="clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);">
+              Telecommunication
+            </div>
+            <div class="absolute -bottom-1 left-2 w-4 h-4 bg-amber-600 -z-10" style="clip-path: polygon(0 0, 100% 0, 100% 100%);"></div>
+          </div>
+        </figure>
+        <div class="card-body items-center text-center pt-12 pb-8">
+          <p class="text-slate-600 leading-relaxed font-light text-lg" style="font-family: 'Playfair Display', serif;">
+            Full-scale installation of CCTV, PABX systems, and data networks. We specialize in both inside and outside plant system distribution.
+          </p>
+          <div class="mt-4">
+            <a href="#" class="font-bold text-slate-900 hover:text-indigo-600 transition-colors">Read More &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+   
 
 <!-- 30 YEARS SECTION -->
 
-<section class="bg-white py-20 text-black">
+<section class="bg-white py-20 text-black fade-in-section">
   <div class="max-w-7xl mx-auto px-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div>
@@ -261,7 +306,7 @@
 
 <!-- PROJECT UPDATES SECTION-->
 
-<section class="py-12 md:py-20 bg-base-100">
+<section class="py-12 md:py-20 bg-base-100 fade-in-section">
   <div class="max-w-7xl mx-auto px-4 md:px-6">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 border-b border-gray-100 pb-6">
@@ -334,7 +379,7 @@
 </section>
     
 <!-- PRESIDENT'S CORNER SECTION-->
-    <section class="py-16 bg-base-100">
+    <section class="py-16 bg-base-100 fade-in-section">
   <div class="container mx-auto px-4">
     <div class="flex flex-col lg:flex-row items-center gap-12">
       
@@ -378,7 +423,7 @@
   <div class="absolute inset-0 bg-yellow-400 -skew-y-2 origin-right translate-y-10 z-10"></div>
 </div>
 
-<section class="bg-base-200 text-shadow-black py-20">
+<section class="bg-base-200 text-shadow-black py-20 fade-in-section">
   <div class="container mx-auto px-6">
     <div class="text-center mb-8">
       <h2 class="text-3xl font-bold uppercase tracking-widest text-black">Professional Licenses & Accreditations</h2>
@@ -430,6 +475,27 @@
 
 {% block extra_js %}
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+    });
+
     // Only JS specific to the Home Page (like the image switcher)
     function changeImage(src, btnElement) {
         const mainImg = document.getElementById('mainImage');
